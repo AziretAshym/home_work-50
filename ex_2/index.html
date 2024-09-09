@@ -75,15 +75,39 @@
             );
         }
 
+        const Advantages = () => {
+            return (
+                <div className="container">
+                    <div className="advantages">
+                        <div className="card_1 advantages_card">
+                            <p>Выезд мастера в течение 60 мин.</p>
+                        </div>
+                        <div className="card_2 advantages_card">
+                            <p>Бесплатная экспресс-диагностика</p>
+                        </div>
+                        <div className="card_3 advantages_card">
+                            <p>Ремонт оригинальными комплектующими</p>
+                        </div>
+                        <div className="card_4 advantages_card">
+                            <p>Гарантия каждому владельцу до 2-х лет</p>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+
         const AllComponents = () => {
             return (
                 <div>
                     <Header />
                     <Navigation navItems={navList} />
                     <MainInfo />
+                    <Advantages />
                 </div>
             );
         }
+
+
 
 
         ReactDOM.createRoot(app).render(<AllComponents />)
