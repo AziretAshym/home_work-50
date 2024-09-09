@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1 class="mainTitle">Favorite movies</h1>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        const app = document.getElementById('app');
+
+        const Movie = ({title, yearOfIssue, poster}) => {
+            return (
+                <div className="movie">
+                    <a href={poster}>
+                        <img src={poster} alt={title} className="movieImg"/>
+                    </a>
+                    <h3 className="movieTitle">{title}</h3>
+                    <p className="movieYear">Year of issue: <b>{yearOfIssue}</b></p>
+                </div>
+              )
+        };
+
+        const movies = [
+            {title: "Ирландец ", yearOfIssue: 2019, poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/bdeaa0c2-fe6a-4007-a47b-1d9f9d9547d3/600x900", id: 1},
+            {title: "Интерстеллар ", yearOfIssue: 2014, poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/600x900", id: 2},
+            {title: "1+1 ", yearOfIssue: 2011, poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/bf93b465-1189-4155-9dd1-cb9fb5cb1bb5/600x900", id: 3},
+        ];
+
+        const content = (
+            movies.map((movie) => {
+                return (
+                  <Movie key={movie.id} poster={movie.poster} title={movie.title} yearOfIssue={movie.yearOfIssue} />
+                );
+            })
+        );
+
+        ReactDOM.render(content, app);
+
+
+    </script>
+</body>
+</html>
