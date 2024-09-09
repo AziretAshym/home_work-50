@@ -96,6 +96,29 @@
             )
         }
 
+        const Footer = () => {
+            return (
+                <footer className="footer">
+                    <div className="container footer_container">
+                        <div className="work_mode">
+                            <p>Режим работы</p>
+                            <div className="footer_graph">
+                                <p>Пн-Пт с 07:00 до 24:00</p>
+                                <p>Сб, Вс: с 07:00 до 24:00</p>
+                            </div>
+                        </div>
+                        <div className="footer_calls"><a href="tel:+74957556983" className="footer_phone">+7(495) 755 69
+                            83</a>
+                            <button type="button" className="footer_btn-call"><span>Заказать звонок</span></button>
+                        </div>
+                        <div className="website">
+                            <p>© 2021 sitename.ru <span>Все права защищены</span></p>
+                        </div>
+                    </div>
+                </footer>
+            );
+        }
+
         const AllComponents = () => {
             return (
                 <div>
@@ -103,13 +126,11 @@
                     <Navigation navItems={navList} />
                     <MainInfo />
                     <Advantages />
+                    <Footer />
                 </div>
             );
         }
-
-
-
-
+        
         ReactDOM.createRoot(app).render(<AllComponents />)
     </script>
 
