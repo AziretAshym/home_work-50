@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -44,7 +45,7 @@
 
         const navList = ["Главная", "Услуги и цены", "Юр.лица", "Контакты", "Вопрос-ответ", "Полезная информация"];
 
-        const Navigation = ({navItem}) => {
+        const Navigation = ({navItems}) => {
             return (
                 <nav className="navigation nav-hidden" id="mainNav">
                     <ul>
@@ -56,14 +57,36 @@
             )
         };
 
+        const MainInfo = () => {
+            return (
+                <div className="main">
+                    <div className="container main-container">
+                        <div className="main-info">
+                            <h1 className="main-title">Ремонт стиральных машин в Москве</h1>
+                            <ul className="main-list">
+                                <li>Отличные цены на запчасти</li>
+                                <li>Фирменная гарантия на все работы</li>
+                                <li>Ремонт в день обращения</li>
+                            </ul>
+                            <button className="btn" type="button">Заказать ремонт</button>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
         const AllComponents = () => {
             return (
                 <div>
                     <Header />
-                    <Navigation  navItem={navList} />
+                    <Navigation navItems={navList} />
+                    <MainInfo />
                 </div>
             );
         }
+
+
+        ReactDOM.createRoot(app).render(<AllComponents />)
     </script>
 
 </body>
