@@ -1,0 +1,367 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.28;
+    color: #000;
+    background: #fff;
+    min-width: 480px;
+}
+
+.container {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    background: linear-gradient(90deg, #443682 0%, #28418a 46.75%, #00669c 100%);
+}
+
+.header-container {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding: 20px 0 24px 114px;
+    background: url(images/logo.svg) top left no-repeat;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.logo strong {
+    font-size: 20px;
+    display: block;
+}
+
+.btn-burger {
+    width: 53px;
+    height: 53px;
+    background: url(images/ic-bar.svg) center no-repeat;
+    border: none;
+}
+
+.socials {
+    width: 100%;
+}
+
+.socials a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 6px;
+}
+
+.insta {
+    background: url(images/ic-insta.svg) center no-repeat;
+    border-radius: 9px;
+}
+
+.vk {
+    background: url(images/ic-vk.svg) center no-repeat;
+    border-radius: 100%;
+}
+
+.tg {
+    background: url(images/ic-tg.svg) center no-repeat;
+    border-radius: 100%;
+}
+
+.whatsapp {
+    background: url(images/ic-whatsap.svg) center no-repeat;
+}
+
+.calls {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    transform: translateY(100%);
+    background: #fff;
+    width: calc(100% - 40px);
+    padding: 21px 18px 19px;
+    border-radius: 0 0 20px 20px;
+    text-align: right;
+}
+
+.phone {
+    font-weight: 500;
+    font-size: 15px;
+    background: linear-gradient(83deg, #5f24a8 0%, #01669c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.phone::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: url(uploads/ic-phone-blue.svg) left center no-repeat;
+    margin-right: 10px;
+}
+
+.btn-call {
+    padding: 11px 21px 13px;
+    background: linear-gradient(180deg, #5f24a8 0%, #04629a 100%);
+    border: none;
+    position: relative;
+    border-radius: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-call::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+}
+
+.btn-call span {
+    font-weight: 500;
+    font-size: 15px;
+    background: linear-gradient(180deg, #5f24a8 0%, #04629a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 11;
+}
+
+.navigation {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 40px 0 10px;
+    list-style: none;
+}
+
+.navigation li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #fff;
+    text-align: center;
+}
+
+.navigation li:last-child {
+    border: none;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main {
+    background: url(uploads/bg-sm.png) bottom 99px left 0 / cover no-repeat;
+    margin-bottom: 24px;
+}
+
+.main-container {
+    padding-top: 126px;
+    padding-bottom: 413px;
+    background: url(uploads/main-photo.png) right bottom / 575px no-repeat;
+}
+
+.main-info {
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 39px;
+    color: #fff;
+}
+
+.main-list {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #fff;
+    margin-left: -25px;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background: #00bb34;
+    padding: 21px 51px 20px 69px;
+    cursor: pointer;
+}
+
+.advantages {
+    display: flex;
+    gap: 38px;
+    flex-wrap: wrap;
+    margin-bottom: 124px;
+    justify-content: center;
+}
+
+.advantages_card {
+    width: 262px;
+    height: 280px;
+    border-radius: 28px;
+    margin-bottom: 29px;
+}
+
+.advantages_card p {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    padding: 182px 0 62px;
+}
+
+.card_1 {
+    background: url(uploads/card_1.svg) top 65px center no-repeat, linear-gradient(180deg, #a6dbf5 0%, #451874 97.92%);
+}
+
+.card_1 p {
+    padding-left: 68px;
+    padding-right: 68px;
+}
+
+.card_2 {
+    background: url(uploads/card_2.svg) top 65px center no-repeat, linear-gradient(180deg, #a6dbf5 0%, #451874 97.92%);
+}
+
+.card_2 p {
+    padding-left: 52px;
+    padding-right: 52px;
+}
+
+.card_3 {
+    background: url(uploads/card_3.svg) top 65px center no-repeat, linear-gradient(180deg, #a6dbf5 0%, #451874 97.92%);
+}
+
+.card_3 p {
+    padding-left: 45px;
+    padding-right: 44px;
+}
+
+.card_4 {
+    background: url(uploads/card_4.svg) top 65px center no-repeat, linear-gradient(180deg, #a6dbf5 0%, #451874 97.92%);
+}
+
+.card_4 p {
+    padding-right: 56px;
+    padding-left: 54px;
+}
+
+.footer {
+    background: #000;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 70px 0 73px;
+}
+
+.work_mode {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.work_mode::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+}
+
+.work_mode p {
+    margin: 0;
+}
+
+.footer_graph {
+    font-size: 15px;
+    margin-left: 27px;
+}
+
+.footer_calls {
+    margin-bottom: 40px;
+}
+
+.footer_phone {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.footer_phone::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(uploads/ic-phone-white.svg)bottom left no-repeat;
+    margin-right: 10px;
+}
+
+.footer_btn-call {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: #000;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    padding: 13px 19px 13px 22px;
+}
+
+.website {
+    max-width: 203px;
+    align-items: center;
+}
+
+.website p {
+    margin: 0;
+}

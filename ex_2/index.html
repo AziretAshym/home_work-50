@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        const app = document.getElementById('app');
+
+        const Header = () => {
+            return (
+                <header className="header">
+                    <div className="container header-container">
+                        <a href="#" className="logo"><strong>Moscowqual</strong> Ремонт бытовой техники</a>
+                        <button type="button" className="btn-burger" id="navBtn"></button>
+
+                        <div className="socials">
+                            <a href="#" className="insta">instagram</a>
+                            <a href="#" className="vk">в контакте</a>
+                            <a href="#" className="tg">telegram</a>
+                            <a href="#" className="whatsapp">whatsapp</a>
+                        </div>
+
+                        <div className="calls">
+                            <a href="tel:+74957556983" className="phone">+7(495) 755 69 83</a>
+                            <button type="button" className="btn-call"><span>Заказать звонок</span></button>
+                        </div>
+                    </div>
+                </header>
+            );
+        };
+
+
+        const navList = ["Главная", "Услуги и цены", "Юр.лица", "Контакты", "Вопрос-ответ", "Полезная информация"];
+
+        const Navigation = ({navItem}) => {
+            return (
+                <nav className="navigation nav-hidden" id="mainNav">
+                    <ul>
+                        {navItems.map((navItem, index) => (
+                            <li key={index}><a href="#">{navItem}</a></li>
+                        ))}
+                    </ul>
+                </nav>
+            )
+        };
+
+        const AllComponents = () => {
+            return (
+                <div>
+                    <Header />
+                    <Navigation  navItem={navList} />
+                </div>
+            );
+        }
+    </script>
+
+</body>
+</html>
